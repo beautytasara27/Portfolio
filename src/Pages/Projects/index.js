@@ -36,8 +36,8 @@ function Projects() {
                 ))}
               </h6>
             </header>
-            <div className="image fit">
-              <img src={require(`../../Assets/${project.imageUrl}`)} alt="project illustration should be here"/>
+            <div className="image fit flex justify-center">
+              <img className="imgMe" src={require(`../../Assets/${project.imageUrl}`)} alt="project illustration should be here"/>
             </div>
             <p>{project.paragraphs[0].Description}</p>
             <ul className="actions special">

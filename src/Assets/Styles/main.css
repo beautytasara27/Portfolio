@@ -2719,7 +2719,7 @@ input[type="radio"]:focus + label:before {
 }
 
 .image.fit {
-  display: block;
+  display: flex;
   margin: 2.5rem 0;
   width: 100%;
 }
@@ -2729,7 +2729,11 @@ input[type="radio"]:focus + label:before {
 }
 
 .image.fit img {
-  width: 100%;
+  display: flex;
+  max-width:100%;
+  max-height:300px;
+  width: auto;
+  height: auto;
 }
 
 .image.main {

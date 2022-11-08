@@ -108,9 +108,7 @@ function Project() {
                   <Fragment key={image}>
                     <div className="">
                       <img
-                        width="200"
-                        height="200"
-                        className=" imgMe"
+                        className="max-w-[500px] max-h-[500px]"
                         src={require(`../../Assets/Images/Altonium/${image}`)}
                       />
                     </div>

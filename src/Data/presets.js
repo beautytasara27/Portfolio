@@ -13,7 +13,7 @@ export const initialState = [
       },
     ],
     Url: "",
-    imageUrl: "Images/Altonium/alto1.png",
+    imageUrl: "Images/Altonium/alto2.png",
     video: "",
     images: ["alto2.png", "altom1.png", "altom2.png", "altom3.png", "altom4.png"],
   },

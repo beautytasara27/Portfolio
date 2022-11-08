@@ -14,7 +14,7 @@ function Navbar() {
       <nav id="nav" className="sticky">
         <ul className="links">
           <li className="active">
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li className="active">
             <Link to="/projects">Projects</Link>
