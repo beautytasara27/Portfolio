@@ -9,7 +9,7 @@ function Project() {
 
   useEffect(() => {
     FindProject();
-  }, [id]);
+  }, [id, FindProject]);
   function FindProject() {
     const result = initialState.find(
       (currentProject) => currentProject.projectId === id
@@ -20,6 +20,14 @@ function Project() {
   if (!currentProject) {
     return <div>Loading...</div>;
   }
+  const arrowStyles = {
+    position: "absolute",
+    zIndex: 2,
+    top: "calc(50% - 15px)",
+    width: 30,
+    height: 30,
+    cursor: "pointer",
+  };
   const indicatorStyles = {
     background: "#696969",
     width: 42,
@@ -34,7 +42,7 @@ function Project() {
           <header>
             <span className="date">{currentProject.Date}</span>
             <h2>
-              <a href="#">{currentProject.projectName}</a>
+             {currentProject.projectName}
             </h2>
             <h6>
               {" "}
@@ -52,32 +60,81 @@ function Project() {
             </h6>
           </header>
           {currentProject.paragraphs.map((paragraph) => (
-            <div className="sm:p-8 sm:shadow-2xl">
+            <div key={paragraph.Title} className="sm:p-8 sm:shadow-2xl">
               <h5 className="text-start">{paragraph.Title}</h5>
               <p>{paragraph.Description}</p>
             </div>
           ))}
-          <div className="sm:p-8 sm:shadow-2xl mt-10">
-            <h5 className="text-start">Demo</h5>
-            <div className="video-responsive">
-              <iframe
-                width="853"
-                height="480"
-                src={currentProject.video}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="Embedded youtube"
-              />
+          {currentProject.video !== "" && (
+            <div className="sm:p-8 sm:shadow-2xl mt-10">
+              <h5 className="text-start">Demo</h5>
+              <div className="video-responsive">
+                <iframe
+                  width="853"
+                  height="480"
+                  src={currentProject.video}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title="Embedded youtube"
+                />
+              </div>
             </div>
-          </div>
+          )}
           <div className="sm:p-8 sm:shadow-2xl mt-10">
             <h5 className="text-start">Screenshots</h5>
             <Carousel
               autoPlay
               showThumbs={false}
               showStatus={false}
-              showArrows={false}
+              showArrows={true}
+              renderArrowPrev={(onClickHandler, hasPrev, label) =>
+                hasPrev && (
+                  <button
+                    type="button"
+                    onClick={onClickHandler}
+                    title={label}
+                    style={{ ...arrowStyles, left: 15 }}
+                  >
+                    <svg
+                      className="rotate-180"
+                      width="7"
+                      height="10"
+                      viewBox="0 0 7 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.81185 5L1.81185 10L0.916016 9.10417L5.04101 5L0.936848 0.895834L1.83268 -4.00688e-08L6.81185 5Z"
+                        fill="#000"
+                      />
+                    </svg>
+                  </button>
+                )
+              }
+              renderArrowNext={(onClickHandler, hasNext, label) =>
+                hasNext && (
+                  <button
+                    type="button"
+                    onClick={onClickHandler}
+                    title={label}
+                    style={{ ...arrowStyles, right: 15 }}
+                  >
+                    <svg
+                      width="7"
+                      height="10"
+                      viewBox="0 0 7 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.81185 5L1.81185 10L0.916016 9.10417L5.04101 5L0.936848 0.895834L1.83268 -4.00688e-08L6.81185 5Z"
+                        fill="#000"
+                      />
+                    </svg>
+                  </button>
+                )
+              }
               renderIndicator={(onClickHandler, isSelected, index, label) => {
                 if (isSelected) {
                   return (
@@ -109,13 +166,24 @@ function Project() {
                     <div className="">
                       <img
                         className="max-w-[500px] max-h-[500px]"
-                        src={require(`../../Assets/Images/Altonium/${image}`)}
+                        src={require(`../../Assets/${image}`)}
                       />
                     </div>
                   </Fragment>
                 ))}
             </Carousel>
           </div>
+          {currentProject.links.length > 1 && (
+            <div className="sm:p-8 sm:shadow-2xl mt-10">
+              <h5>External Links</h5>
+              {currentProject.links.map((link) => (
+                <div className="flex space-x-4">
+                  <p>{link.name}</p>
+                  <a href={link.url}>{"Click here"}</a>
+                </div>
+              ))}
+            </div>
+          )}
         </article>
       </section>
     </div>

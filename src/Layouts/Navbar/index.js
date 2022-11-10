@@ -11,7 +11,7 @@ function Navbar() {
  
   return (
     <Fragment>
-      <nav id="nav" className="sticky">
+      <nav id="nav" className="sticky top-0">
         <ul className="links">
           <li className="active">
             <Link to="/">Home</Link>

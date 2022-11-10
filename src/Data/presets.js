@@ -1,6 +1,6 @@
 export const initialState = [
   {
-    projectId: "1",
+    projectId: "0",
     Date: "March 16, 2022",
     projectName: "Gaming Platform",
     Languages: ["Javascript"],
@@ -14,8 +14,38 @@ export const initialState = [
     ],
     Url: "",
     imageUrl: "Images/Altonium/alto2.png",
+    video:
+      "https://drive.google.com/file/d/1VUiOTgNgtfkdVo_amOB-ne5WJgw-80R6/preview",
+    images: [
+      "Images/Altonium/alto1.png",
+      "Images/Altonium/alto2.png",
+      "Images/Altonium/alto3.png",
+      "Images/Altonium/alto4.png",
+    ],
+    links: [],
+  },
+  {
+    projectId: "1",
+    Date: "August 16, 2022",
+    projectName: "Ecommerce Shop",
+    Languages: ["Javascript", ", GraphQl"],
+    Frameworks: ["ReactJS", ", Apollo Client"],
+    paragraphs: [
+      {
+        Title: "Overview",
+        Description:
+          "I am working on this project to learn GraphQl framework and to demonstrate good React JS practices for building an ecommerce website.",
+      },
+    ],
+    Url: "",
+    imageUrl: "Images/Scandi/scandi1.png",
     video: "",
-    images: ["alto2.png", "altom1.png", "altom2.png", "altom3.png", "altom4.png"],
+    images: [
+      "Images/Scandi/scandi1.png",
+      "Images/Scandi/scandi2.png",
+      "Images/Scandi/scandi3.png",
+    ],
+    links: [],
   },
   {
     projectId: "2",
@@ -33,7 +63,13 @@ export const initialState = [
     Url: "",
     imageUrl: "Images/Muse/muse.png",
     video: "",
-    images: [],
+    images: ["Images/Muse/muse.png"],
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/beautytasara27/com.muse-shop.web",
+      },
+    ],
   },
   {
     projectId: "3",
@@ -52,7 +88,49 @@ export const initialState = [
     imageUrl: "Images/FruitSorting/API.png",
     video:
       "https://drive.google.com/file/d/1C8P5cAhYCTLgGAhqac9N1ltr9U0Y11j0/preview",
-    images: [],
+    images: [
+      "Images/FruitSorting/API.png",
+      "Images/FruitSorting/thesis1.png",
+      "Images/FruitSorting/thesis2.png",
+    ],
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/beautytasara27/com.muse-shop.web",
+      },
+      {
+        name: "Paper",
+        url: "https://ieeexplore.ieee.org/document/9915244/",
+      },
+    ],
+  },
+  {
+    projectId: "-1",
+    Date: "Feb 21, 2022",
+    projectName: "CNN Model From Scratch",
+    Languages: ["Python"],
+    Frameworks: ["Numpy"],
+    paragraphs: [
+      {
+        Title: "Overview",
+        Description:
+          "This project was a challenge I took upon deciding to venture into computer vision. My supervisor advised me to write my own library like keras so that I could understand the obscure mechanisms of the Keras Library better when I use it to solve other problems. This is far from perfect but I managed to make it work on the Mnist Dataset.",
+      },
+    ],
+    Url: "",
+    imageUrl: "Images/CNN/cnn1.png",
+    video: "",
+    images: [
+      "Images/CNN/cnn1.png",
+      "Images/CNN/cnn2.png",
+      "Images/CNN/cnn3.png",
+    ],
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/beautytasara27/CNN-python",
+      },
+    ],
   },
   {
     projectId: "4",
@@ -70,7 +148,8 @@ export const initialState = [
     Url: "",
     imageUrl: "Images/MobileProperty/mobile.png",
     video: "",
-    images: [],
+    images: ["Images/MobileProperty/mobile.png"],
+    links: [],
   },
   {
     projectId: "5",
@@ -89,7 +168,8 @@ export const initialState = [
     imageUrl: "Images/WebProperty/Web.png",
     video:
       "https://drive.google.com/file/d/1SHhRVi60sWKtg3kCLsXxAHMFFyyrqjDc/preview",
-    images: [],
+    images: ["Images/WebProperty/Web.png"],
+    links: [],
   },
   {
     projectId: "6",
@@ -107,7 +187,13 @@ export const initialState = [
     Url: "https://www.researchgate.net/publication/353510319_Evaluating_Extractive_Summarization_Techniques_on_News_Articles",
     imageUrl: "Images/TextSum/summarization.png",
     video: "",
-    images: [],
+    images: ["Images/TextSum/sum1.png", "Images/TextSum/sum2.png"],
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/beautytasara27/TextSummarization",
+      },
+    ],
   },
   {
     projectId: "7",
@@ -125,7 +211,17 @@ export const initialState = [
     Url: "https://drive.google.com/file/d/1JT-KNM7f_ggomXrJF8mmVhcIlX8BYDAT/view?usp=sharing",
     imageUrl: "Images/MentalHealthFirst/mental.png",
     video: "https://www.youtube.com/embed/hgUQqbfFFZw ",
-    images: [],
+    images: ["Images/MentalHealthFirst/mental.png"],
+    links: [
+      {
+        name: "Github (Backend)",
+        url: "https://github.com/beautytasara27/ForumCoreApplication",
+      },
+      {
+        name: "Github (FrontEnd)",
+        url: "https://github.com/beautytasara27/MentalHealthFirst",
+      },
+    ],
   },
   {
     projectId: "8",
@@ -143,7 +239,13 @@ export const initialState = [
     Url: "https://docs.google.com/presentation/d/1WIR1jifgnPKRBK-Ub5kkyJfW1i1QcrQIki8Jxr328X8/edit?usp=sharing",
     imageUrl: "Images/Sluggy/snake.png",
     video: "https://www.youtube.com/embed/s60pnuCvrNs",
-    images: [],
+    images: ["Images/Sluggy/snake.png"],
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/beautytasara27/Snake-3D",
+      },
+    ],
   },
   {
     projectId: "9",
@@ -162,7 +264,13 @@ export const initialState = [
     imageUrl: "Images/Pygame/Pacman.png",
     video:
       "https://drive.google.com/file/d/14wzfk3hEdKzQ16aOSAcWEMkB4hr0PmyE/preview",
-    images: [],
+    images: ["Images/Pygame/Pacman.png"],
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/beautytasara27/project",
+      },
+    ],
   },
   {
     projectId: "10",
@@ -180,7 +288,14 @@ export const initialState = [
     Url: "https://drive.google.com/file/d/14wzfk3hEdKzQ16aOSAcWEMkB4hr0PmyE/view?usp=sharing",
     imageUrl: "Images/NetworkX/networkX.png",
     video: "https://www.youtube.com/embed/PMU97Rq0K68",
-    images: [],
+    images: ["Images/NetworkX/networkX.png"],
+
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/beautytasara27/ShortestPathCPP",
+      },
+    ],
   },
   {
     projectId: "11",
@@ -198,7 +313,13 @@ export const initialState = [
     Url: "https://drive.google.com/file/d/14wzfk3hEdKzQ16aOSAcWEMkB4hr0PmyE/view?usp=sharing",
     imageUrl: "Images/BeautyShop/beautyshoperd.png",
     video: "https://www.youtube.com/embed/PoYc15tC7Ps",
-    images: [],
+    images: ["Images/BeautyShop/beautyshoperd.png"],
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/beautytasara27/ShortestPathCPP",
+      },
+    ],
   },
   {
     projectId: "12",
@@ -216,6 +337,7 @@ export const initialState = [
     Url: "https://drive.google.com/file/d/14wzfk3hEdKzQ16aOSAcWEMkB4hr0PmyE/view?usp=sharing",
     imageUrl: "Images/BeautyShop/beautyshoperd.png",
     video: "https://www.youtube.com/embed/flC_KM6A6Mo",
-    images: [],
+    images: ["Images/BeautyShop/beautyshoperd.png"],
+    links: [],
   },
 ];

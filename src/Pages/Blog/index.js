@@ -4,7 +4,7 @@ function Blog() {
       <section className="">
         <article>
           <header>
-            <h2>This is where I write stuff I'm learning!</h2>
+            <h2>Coming Soon!</h2>
           </header>
         </article>
       </section>

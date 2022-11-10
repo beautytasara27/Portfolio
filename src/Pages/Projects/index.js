@@ -19,7 +19,7 @@ function Projects() {
             <header>
               <span className="date">{project.Date}</span>
               <h2>
-                <a href="#">{project.projectName}</a>
+               {project.projectName}
               </h2>
               <h6>
                 {" "}
@@ -39,7 +39,9 @@ function Projects() {
             <div className="image fit flex justify-center">
               <img className="imgMe" src={require(`../../Assets/${project.imageUrl}`)} alt="project illustration should be here"/>
             </div>
-            <p>{project.paragraphs[0].Description}</p>
+           
+            <p className="text-ellipsis  ">{project.paragraphs[0].Description}</p>
+        
             <ul className="actions special">
               <li>
                 <Link to={`/project/${project.projectId}`} className="button">

@@ -11,7 +11,7 @@ import Project from "./Pages/Project";
 function App() {
   return (
     <div className="App">
-      <div id="wrapper" className="fade-in">
+      <div id="wrapper" className="fade-in relative">
         <div className="bg fixed"></div>
         <Header />
         <Navbar />
