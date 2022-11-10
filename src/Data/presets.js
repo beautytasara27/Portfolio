@@ -15,7 +15,7 @@ export const initialState = [
     Url: "",
     imageUrl: "Images/Altonium/alto2.png",
     video:
-      "https://drive.google.com/file/d/1VUiOTgNgtfkdVo_amOB-ne5WJgw-80R6/preview",
+      "https://www.youtube.com/embed/RmU-EzRo6x8",
     images: [
       "Images/Altonium/alto1.png",
       "Images/Altonium/alto2.png",

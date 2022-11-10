@@ -37,7 +37,7 @@ function Project() {
   };
   return (
     <div id="main">
-      <section className="">
+      <section className="mb-24">
         <article>
           <header>
             <span className="date">{currentProject.Date}</span>

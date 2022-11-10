@@ -3,7 +3,7 @@ function MobileMenu({ handleLinkClicks }) {
   const MenuItems = [
     {
       id: "Home",
-      url: "/home",
+      url: "/",
     },
     {
       id: "Projects",
